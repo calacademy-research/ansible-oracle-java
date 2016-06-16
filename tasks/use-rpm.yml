@@ -14,6 +14,7 @@
 
 
 - name: install JDK via RPM file with yum
+  become: True
   yum:
     name: "{{ java_download_path }}/{{ jdk_tarball_file }}.rpm"
     state: present
